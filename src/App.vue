@@ -4,26 +4,15 @@
   </header>
 
   <main>
-    <div class="container ">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li v-for="(tab, index) in tabs" class="nav-item" role="presentation">
-            <button class="nav-link" :class="{'active' : activeTab === index}" id="{{tab.id}}-tab" type="button" @click="changeActiveTab(index)">{{tab.name}}</button>
-          </li>
-        </ul>
-        <div class="tab-content p-3" id="myTabContent">
-          <div v-for="(tab, index) in tabs" class="tab-pane fade" :class="{'show active' : activeTab === index}" id="{{tab.id}}" role="tabpanel">{{tab.content}}</div>
-        </div>
+    <div class="container">
+      <NavTab :tabs="tabs1"></NavTab>
+      <NavTab :tabs="tabs2"></NavTab>
     </div>
   </main>
 </template>
 
 <style>
 @import './assets/base.css';
-
-* {
-  padding: 5px 7px;
-  margin: 7px;
-}
 
 #app {
   max-width: 1280px;
@@ -85,11 +74,14 @@ a,
 }
 </style>
 <script>
+import NavTab from "./components/NavTab.vue";
   export default {
+    components : {
+      NavTab,
+    },
     data() {
       return { 
-        activeTab : 0,
-        tabs : [
+        tabs1 : [
           {
             id : 'home',
             name : 'Home',
@@ -105,13 +97,20 @@ a,
             name : 'Contact',
             content : 'Contact tab content',
           },
+        ],
+        tabs2 : [
+          {
+            id : 'mobile',
+            name : 'Mobile',
+            content : 'Mobile tab content',
+          },
+          {
+            id : 'laptop',
+            name : 'Laptop',
+            content : 'Laptop tab content',
+          },
         ]
-       }
-    },
-    methods : {
-      changeActiveTab(index) {
-        this.activeTab = index
       }
-    }
+    },
   }
 </script>
