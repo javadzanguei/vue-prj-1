@@ -75,42 +75,42 @@ a,
 </style>
 <script>
 import NavTab from "./components/NavTab.vue";
-  export default {
-    components : {
-      NavTab,
-    },
-    data() {
-      return { 
-        tabs1 : [
-          {
-            id : 'home',
-            name : 'Home',
-            content : 'Home tab content',
-          },
-          {
-            id : 'profile',
-            name : 'Profile',
-            content : 'Profile tab content',
-          },
-          {
-            id : 'contact',
-            name : 'Contact',
-            content : 'Contact tab content',
-          },
-        ],
-        tabs2 : [
-          {
-            id : 'mobile',
-            name : 'Mobile',
-            content : 'Mobile tab content',
-          },
-          {
-            id : 'laptop',
-            name : 'Laptop',
-            content : 'Laptop tab content',
-          },
-        ]
-      }
-    },
-  }
+export default {
+  components : {
+    NavTab,
+  },
+  data() {
+    return { 
+      tabs1 : [
+        {
+          id : 'home',
+          name : 'Home',
+          content : 'Home tab content',
+        },
+        {
+          id : 'profile',
+          name : 'Profile',
+          content : 'Profile tab content',
+        },
+        {
+          id : 'contact',
+          name : 'Contact',
+          content : 'Contact tab content',
+        },
+      ],
+      tabs2 : [
+        {
+          id : 'mobile',
+          name : 'Mobile',
+          content : 'Mobile tab content',
+        },
+        {
+          id : 'laptop',
+          name : 'Laptop',
+          content : 'Laptop tab content',
+        },
+      ]
+    }
+  },
+}
 </script>

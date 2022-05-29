@@ -11,10 +11,13 @@
 
 <script>
 export default {
-  name: "NavTab",
-  props : [
-    'tabs',
-  ],
+  name : "NavTab",
+  props : {
+    tabs : {
+      type : Array,
+      required : true,
+    },
+  },
   data() {
     return {
       activeTab : 0,
@@ -25,7 +28,6 @@ export default {
       this.activeTab = index
     }
   }
-
 }
 </script>
 
